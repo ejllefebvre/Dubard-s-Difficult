@@ -1,0 +1,68 @@
+		combo.addSelectionListener(new SelectionAdapter() {
+			    public void widgetSelected(SelectionEvent e) {
+			    	  //Fires when a name is clicked from the combo box
+			    	  for (int i=0; i<num; i++) {
+			  			//for loop that goes through each element
+              //num = the number of students in the list
+			    		if(combo	.getText().equals (ITEMS[i])){	
+			    			//when one is chosen it removes it from ALL other combo boxes
+			    		lblNewLabel_3.setText(combo.getText());
+			    		ITEMS[i] = " ";
+              //the original array of string of the students
+			    			}
+			    		}
+			    	  combo.setItems(ITEMS);
+			    	  combo_1.setItems(ITEMS);
+			      combo_2.setItems(ITEMS);
+		  }    
+		}); 
+	
+	combo_1.addSelectionListener(new SelectionAdapter() {
+	      public void widgetSelected(SelectionEvent e) {
+	    	  //Fires when a name is clicked from the combo box
+	    	  for (int i=0; i<num; i++) {
+	  			//for loop that goes through each element
+	    		if(combo_1.getText().equals (ITEMS[i])){	
+	    			//when one is chosen it removes it from ALL other combo boxes
+	    			lblNewLabel_2.setText(combo_1.getText());
+	    			ITEMS[i] = " ";
+	    			//newlabel_1
+	    			}
+	    		}
+	    	  combo.setItems(ITEMS);
+	    	  combo_1.setItems(ITEMS);
+	      combo_2.setItems(ITEMS);
+  }    
+}); 
+	combo_2.addSelectionListener(new SelectionAdapter() {
+	      public void widgetSelected(SelectionEvent e) {
+	    	  //Fires when a name is clicked from the combo box
+	    	  for (int i=0; i<num; i++) {
+	  			//for loop that goes through each element
+	    		if(combo_2.getText().equals (ITEMS[i])){	
+	    			//when one is chosen it removes it from ALL other combo boxes
+	    			lblNewLabel_1.setText(combo_2.getText());
+	    			ITEMS[i] = " ";
+	    			}
+	    		}
+	    	  combo.setItems(ITEMS);
+	    	  combo_1.setItems(ITEMS);
+	      combo_2.setItems(ITEMS);
+}    
+}); 
+	
+
+	btnResetChoices.addSelectionListener(new SelectionAdapter() {
+		public void widgetSelected(SelectionEvent e) {
+			for(int i = 0; i<num; i++) {
+				 ITEMS[i] = CONTROL[i];
+         //resets the String array using the Controll String array
+			}
+		  combo.setItems(ITEMS);
+	    	  combo_1.setItems(ITEMS);
+	      combo_2.setItems(ITEMS);
+	      lblNewLabel_1.setText("");
+	      lblNewLabel_2.setText("");
+	      lblNewLabel_3.setText("");
+	    }
+	    });
