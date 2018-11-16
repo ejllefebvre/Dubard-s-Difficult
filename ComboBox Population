@@ -1,3 +1,12 @@
+		//OK so give the progra two arrays of Strings and an int
+		//Arrays ITEMS (the names) and CONTROL (the names again)
+		//ITEMS is what will be edited and displayed as the dropdown choices when you choose a name it will be removed from ITEMS
+		//To reset the choices all Strings in ITEMS will be replaced by the CONTROL items
+		//You will need to make three combo boxes (combo, combo_1, and combo_3)
+		//as well as three labels that go on top of the combo boxes that will desplay the selection.(because every time you select a name the combo boxes repopulate you can not use the native combo box display)
+		//:)
+		
+		
 		combo.addSelectionListener(new SelectionAdapter() {
 			    public void widgetSelected(SelectionEvent e) {
 			    	  //Fires when a name is clicked from the combo box
