@@ -16,19 +16,30 @@ public class Student {
 		
 		public Student(ArrayList<String> names, int index) {
 			namesList = names;
-			choice1List = namesList;
-			choice2List = namesList;
-			choice3List = namesList;
 			
-			choice1List.remove(name);
-			choice2List.remove(name);
-			choice3List.remove(name);
+			choice1List = new ArrayList<String>();
+			choice2List = new ArrayList<String>();
+			choice3List = new ArrayList<String>();
+			
+			copyNamesList(choice1List);
+			copyNamesList(choice2List);
+			copyNamesList(choice3List);
 			
 			choice1 = "none";
 			choice2 = "none";
 			choice3 = "none";
 			
 			name = namesList.get(index);
+			
+			choice1List.remove(name);
+			choice2List.remove(name);
+			choice3List.remove(name);
+		}
+		
+		public void copyNamesList(ArrayList<String> copy){
+			for(int x= 0; x < namesList.size(); x++){
+				copy.add(namesList.get(x));
+			}
 		}
 		
 		public void setChoice1List() {
