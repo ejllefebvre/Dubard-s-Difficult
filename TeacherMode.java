@@ -8,6 +8,7 @@ import java.awt.event.*;
 //TeacherMode
 //StudentPanel
 //and Student
+//@joseph I made a few changes to the Student class so make sure you use the edits 
 //*************************
 
 public class TeacherMode implements ActionListener {
