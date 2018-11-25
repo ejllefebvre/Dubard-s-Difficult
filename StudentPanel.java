@@ -4,7 +4,7 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 public class StudentPanel implements ItemListener {
 
-	public Student student; 
+	public StudentTeacher student; 
 	public JPanel panel;
 	public JLabel nameLabel;
 	private JComponent frame; 
@@ -16,7 +16,7 @@ public class StudentPanel implements ItemListener {
 	public static int x = 50;
 	public static int y = 50;
 	
-	public StudentPanel(Student s){
+	public StudentPanel(StudentTeacher s){
 		student = s;
 		nameLabel = new JLabel(student.name);
 		panel = new JPanel();
@@ -32,21 +32,21 @@ public class StudentPanel implements ItemListener {
 	}
 	
 	public void initialize(int x, int y){
+		panel.setBackground(SystemColor.textHighlight);
 		panel.setBounds(x, y, 704, 98);
 		panel.setLayout(null);
 		
 		nameLabel.setBounds(33, 31, 101, 41);
 		panel.add(nameLabel);
 		
-		firstChoiceList.setBounds(154, 31, 160, 40);
+		firstChoiceList.setBounds(144, 31, 160, 40);
 		panel.add(firstChoiceList);
 		
-		secondChoiceList.setBounds(334, 31, 160, 40);
+		secondChoiceList.setBounds(324, 31, 160, 40);
 		panel.add(secondChoiceList);
 		
-		thirdChoiceList.setBounds(509, 31, 160, 40);
+		thirdChoiceList.setBounds(500, 31, 160, 40);
 		panel.add(thirdChoiceList);
-
 	}
 	
 

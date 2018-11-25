@@ -72,7 +72,7 @@ public class DubardAlgorithm2 {
 				maxScore = s;
 		}
 		
-		System.out.println("Best Group(s):");
+		//System.out.println("Best Group(s):");
 		for(int x = 0; x < validGroups.size(); x++){
 			if(validGroups.get(x).getScore() != maxScore) {
 				validGroups.remove(x);
@@ -85,10 +85,10 @@ public class DubardAlgorithm2 {
 		if(validGroups.size() > 1) {
 			int random = (int) ((validGroups.size()-1) * Math.random());
 			validPair = validGroups.get(random).getPairs();
-			validGroups.get(random).outputPairs();
+			//validGroups.get(random).outputPairs();
 		} else {
 			validPair = validGroups.get(0).getPairs();
-			validGroups.get(0).outputPairs();
+			//validGroups.get(0).outputPairs();
 		}
 		
 		for(int i=0; i<validPair.size(); i++) {
@@ -98,11 +98,11 @@ public class DubardAlgorithm2 {
 			String name1 = names.get(LetterToNum(letter1));
 			String name2 = names.get(LetterToNum(letter2));
 			
-			System.out.println(i + ": " + letter1 + " " + letter2 + " " + name1 + " " + name2);
+//			System.out.println(i + ": " + letter1 + " " + letter2 + " " + name1 + " " + name2);
 			correctGrouping.add(name1 + ", " + name2);
 		}
 		
-		System.out.print(correctGrouping);
+//		System.out.print(correctGrouping);
 	}
 	
 	public static ArrayList<String> getCorrectGrouping() {
@@ -118,8 +118,8 @@ public class DubardAlgorithm2 {
 		scores = new int[CLASS_SIZE][CLASS_SIZE]; 
 		scoresFinal = new int[CLASS_SIZE][CLASS_SIZE];  
 		
-		System.out.println("# of people: " + CLASS_SIZE);
-		System.out.println("# of choices per person: " + NUMBER_OF_CHOICES);
+//		System.out.println("# of people: " + CLASS_SIZE);
+//		System.out.println("# of choices per person: " + NUMBER_OF_CHOICES);
 	}
 	
 	public static void fillScores(){ //at end set all blanks to 0
@@ -404,4 +404,3 @@ public class DubardAlgorithm2 {
 	}
 
 }
-
